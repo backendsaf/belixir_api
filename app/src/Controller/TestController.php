@@ -13,6 +13,6 @@ class TestController extends AbstractController {
     #[Route('/test', name: 'test_index', methods: ['GET'])]
     public function index(): JsonResponse
     {
-        return new JsonResponse("Hellow Sasha", Response::HTTP_OK);
+        return new JsonResponse("Hellow World!", Response::HTTP_OK);
     }
 }
