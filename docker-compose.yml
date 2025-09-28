@@ -19,7 +19,7 @@ services:
     image: nginx:stable-alpine
     container_name: symfony_nginx
     ports:
-      - "10050:80"
+      - "8080:8080"
     volumes:
       - ./app/public:/var/www/html/public:ro
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
@@ -50,7 +50,7 @@ services:
       PMA_USER: symfony
       PMA_PASSWORD: symfony
     ports:
-      - "8081:80"
+      - "8081:8081"
     depends_on:
       - db
 
