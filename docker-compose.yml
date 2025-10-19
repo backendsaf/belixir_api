@@ -7,11 +7,10 @@ services:
     working_dir: /var/www/html
     volumes:
       - ./app:/var/www/html
-      - ./app/var:/var/www/html/var
       - ./php/uploads:/var/www/uploads
     environment:
-      - APP_ENV=dev
-      - DATABASE_URL=mysql://symfony:symfony@db:3306/symfony
+      - APP_ENV=${APP_ENV}
+      - DATABASE_URL=${DATABASE_URL}
     depends_on:
       - db
 
